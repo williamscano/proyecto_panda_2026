@@ -8,7 +8,13 @@
       scrollBtn?.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
       // Cerrar menú hamburguesa al hacer clic en enlace
-      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          const collapse = document.querySelector('.navbar-collapse');
+          if (collapse?.classList.contains('show')) document.querySelector('.navbar-toggler')?.click();
+        });
+      });
+      document.querySelectorAll('.navbar-nav .dropdown-item').forEach(link => {
         link.addEventListener('click', () => {
           const collapse = document.querySelector('.navbar-collapse');
           if (collapse?.classList.contains('show')) document.querySelector('.navbar-toggler')?.click();
