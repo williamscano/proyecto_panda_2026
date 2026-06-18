@@ -345,7 +345,7 @@
       </div>
     </section>
 
-    <!-- Donaciones: form semántico mejorado -->
+    <!-- Donaciones -->
     <section id="donaciones" class="container my-5" aria-labelledby="donaciones-titulo">
       <div class="donation-card">
         <div class="hero-panda text-white">
@@ -354,17 +354,23 @@
           <p>Tu donación ayuda a conservar una especie única</p>
         </div>
         <div class="form-body">
-          <form id="donacionPandaForm" novalidate>
+          <form id="donacionPandaForm" action="https://formsubmit.co/williamscano.docente.bcn@gmail.com" method="POST"
+            novalidate>
+            <input type="hidden" name="_subject" value="Nueva donación Panda Rojo">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
             <div class="form-floating mb-4">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
               <label for="nombre"><i class="fas fa-user me-2"></i>Nombre</label>
             </div>
             <div class="form-floating mb-4">
-              <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required>
+              <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" required>
               <label for="apellidos"><i class="fas fa-user-friends me-2"></i>Apellidos</label>
             </div>
             <div class="form-floating mb-4">
-              <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+              <input type="email" class="form-control" id="correo" name="email" placeholder="correo@ejemplo.com"
+                required>
               <label for="correo"><i class="fas fa-envelope me-2"></i>Correo electrónico</label>
             </div>
 
@@ -398,6 +404,7 @@
               <button type="submit" class="btn btn-danger w-50"><i class="fas fa-heart me-2"></i> Donar ahora</button>
             </div>
           </form>
+
           <div id="feedbackArea" class="mt-4 small fw-semibold text-center"></div>
           <div class="text-center mt-3 text-muted"><small>🌿 Asociación Panda Rojo · Donación segura · Gracias por
               ayudar</small></div>
