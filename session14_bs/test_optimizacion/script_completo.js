@@ -13,7 +13,11 @@ let score = 0;
 let finished = false;
 
 const questions = [
-
+{
+  q: "¿Qué atributo permite cargar imágenes de forma diferida (cuando se necesite)?",
+  options: ["async", "loading='lazy'", "loading='eager'", "fetchpriority"],
+  correct: 1
+},
 {
   q: "¿Cuál es el principal beneficio de usar loading='lazy'?",
   options: [
@@ -49,7 +53,11 @@ const questions = [
   ],
   correct: 1
 },
-
+{
+  q: "¿Qué formato de imagen suele ofrecer mejor compresión para la web moderna?",
+  options: ["BMP", "TIFF", "WebP", "RAW"],
+  correct: 2
+},
 
 {
   q: "¿Qué significa ARIA?",
@@ -61,7 +69,16 @@ const questions = [
   ],
   correct: 0
 },
-
+{
+  q: "¿Para qué sirve aria-label?",
+  options: [
+    "Añadir texto alternativo a imágenes",
+    "Añadir una descripción accesible",
+    "Optimizar imágenes",
+    "Crear una etiqueta"
+  ],
+  correct: 1
+},
 {
   q: "¿Qué atributo ARIA indica que un elemento está expandido?",
   options: [
@@ -128,8 +145,16 @@ const questions = [
   options: ["Accordion", "Card", "Tabs", "Navbar"],
   correct: 0
 },
-
-
+{
+  q: "¿Qué sistema utiliza Bootstrap para maquetación responsive?",
+  options: [
+    "Flex Layout",
+    "CSS Grid propio",
+    "Grid System de 12 columnas",
+    "Frames"
+  ],
+  correct: 2
+},
 {
   q: "¿Qué clase Bootstrap crea un contenedor adaptable?",
   options: [
@@ -240,8 +265,36 @@ const questions = [
   ],
   correct: 0
 },
-
-
+{
+  q: "¿Qué clases de Bootstrap 5 permiten crear un diseño de 2 columnas iguales en todos los tamaños de pantalla?",
+  options: [
+    "<div class='row'><div class='col-2'></div><div class='col-2'></div></div>",
+    "<div class='row'><div class='col-4'></div><div class='col-4'></div></div>",
+    "<div class='row'><div class='col-12'></div><div class='col-12'></div></div>",
+    "<div class='row'><div class='col-6'></div><div class='col-6'></div></div>"
+  ],
+  correct: 3
+},
+{
+  q: "¿Qué clases de Bootstrap 5 permiten mostrar 4 columnas en escritorio y 2 columnas en tablet?",
+  options: [
+    "col-md-3 col-lg-6",
+    "col-sm-6 col-md-4",
+    "col-md-6 col-lg-3",
+    "col-lg-12 col-md-6"
+  ],
+  correct: 2
+},
+{
+  q: "¿Dónde se recomienda colocar un archivo JavaScript cuando no se utiliza el atributo defer?",
+  options: [
+    "Dentro de <head> antes del CSS",
+    "Al final del <body>",
+    "Dentro de <footer>",
+    "Dentro de <title>"
+  ],
+  correct: 1
+},
 {
   q: "¿Cuál es la forma correcta de cargar un archivo JavaScript en el <head> utilizando defer?",
   options: [
@@ -292,7 +345,16 @@ const questions = [
   ],
   correct: 3
 },
-
+{
+  q: "¿Para qué sirve la clase mx-auto en Bootstrap 5?",
+  options: [
+    "Agregar margen superior e inferior automático",
+    "Centrar horizontalmente un elemento mediante márgenes automáticos",
+    "Alinear texto al centro",
+    "Agregar margen izquierda y derecha automáticamente"
+  ],
+  correct: 1
+}
 ];
 
 const quizContainer = document.getElementById("quiz");

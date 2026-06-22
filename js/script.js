@@ -231,7 +231,7 @@ const descripcionesProyectos = {
   proyecto3: {
     titulo: "👥 Proyecto 3: Educación Ambiental",
     imagen:
-      "https://images.unsplash.com/photo-1770231384608-09f355f0169a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFuZGElMjByb2pvJTIwYmFtYnV8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1542736637-74169a802172?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBhbmRhJTIwcm9qb3xlbnwwfHwwfHx8MA%3D%3D",
     texto: `
       <div class="row g-3">
         <div class="col-md-12">

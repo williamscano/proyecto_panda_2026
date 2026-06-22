@@ -23,11 +23,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Estilos cookies -->
+   <link rel="stylesheet" href="components/cookies/styles_cookies_panda.css">
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <!-- Script personalizado -->
   <script src="js/script.js" defer></script>
+  
+  <!-- Script cookies -->
+  <script src="components/cookies/script_cookies_panda.js" defer></script>
+  <script src="components/cookies/script_boton_flotante_preferencias.js" defer></script>
 
 </head>
 
@@ -342,83 +349,96 @@
         </div>
       </div>
     </section>
-    
+
 
     <!-- ===== SECCIÓN PROYECTOS CON CARDS Y MODAL ===== -->
-<section id="proyectos" class="container my-5" aria-labelledby="proyectos-titulo">
-  <h2 id="proyectos-titulo" class="text-center mb-4">🌿 Proyectos de Conservación del Panda Rojo</h2>
-  <p class="text-center text-muted mb-5">Conoce nuestras iniciativas para proteger al <strong>Panda Rojo</strong> y su hábitat. Cada proyecto está diseñado para abordar una amenaza específica.</p>
+    <section id="proyectos" class="container my-5" aria-labelledby="proyectos-titulo">
+      <h2 id="proyectos-titulo" class="text-center mb-4">🌿 Proyectos de Conservación del Panda Rojo</h2>
+      <p class="text-center text-muted mb-5">Conoce nuestras iniciativas para proteger al <strong>Panda Rojo</strong> y
+        su hábitat. Cada proyecto está diseñado para abordar una amenaza específica.</p>
 
-  <div class="row align-items-stretch g-4">
-    <!-- Card 1 - Proyecto 1 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1779764488573-e211e1413302?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhbmRhJTIwcm9qbyUyMGJhbWJ1fGVufDB8fDB8fHww"
-          class="card-img-top ver-descripcion" data-proyecto="proyecto1" role="button" alt="Bosque de bambú - Proyecto Reforestación" style="height: 200px; object-fit: cover;">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title fw-bold text-danger">🌱 Proyecto 1: Reforestación de Bambú</h5>
-          <p class="card-text flex-grow-1">Restauración de corredores de bambú en el Himalaya oriental para garantizar la alimentación del panda rojo.</p>
-          <button class="btn btn-danger w-100 mt-3 ver-descripcion" data-proyecto="proyecto1">
-            <i class="fas fa-eye me-1"></i> Ver más detalles
-          </button>
+      <div class="row align-items-stretch g-4">
+        <!-- Card 1 - Proyecto 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1779764488573-e211e1413302?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhbmRhJTIwcm9qbyUyMGJhbWJ1fGVufDB8fDB8fHww"
+              class="card-img-top ver-descripcion" data-proyecto="proyecto1" role="button"
+              alt="Bosque de bambú - Proyecto Reforestación" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold text-danger">🌱 Proyecto 1: Reforestación de Bambú</h5>
+              <p class="card-text flex-grow-1">Restauración de corredores de bambú en el Himalaya oriental para
+                garantizar la alimentación del panda rojo.</p>
+              <button class="btn btn-danger w-100 mt-3 ver-descripcion" data-proyecto="proyecto1">
+                <i class="fas fa-eye me-1"></i> Ver más detalles
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Proyecto 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1770231384608-09f355f0169a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFuZGElMjByb2pvJTIwYmFtYnV8ZW58MHx8MHx8fDA%3D"
+              class="card-img-top ver-descripcion" data-proyecto="proyecto2" role="button"
+              alt="Cámaras trampa - Proyecto Monitoreo" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold text-danger">📡 Proyecto 2: Monitoreo con GPS</h5>
+              <p class="card-text flex-grow-1">Seguimiento satelital y cámaras trampa para estudiar los patrones de
+                movimiento y comportamiento del panda rojo.</p>
+              <button class="btn btn-danger w-100 mt-3 ver-descripcion" data-proyecto="proyecto2">
+                <i class="fas fa-eye me-1"></i> Ver más detalles
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 - Proyecto 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1542736637-74169a802172?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBhbmRhJTIwcm9qb3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top ver-descripcion " data-proyecto="proyecto3" role="button"
+              alt="Comunidad local - Proyecto Educación" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold text-danger">👥 Proyecto 3: Educación Ambiental</h5>
+              <p class="card-text flex-grow-1">Talleres en comunidades locales para fomentar la coexistencia y reducir
+                el conflicto humano-panda rojo.</p>
+              <button class="btn btn-danger w-100 mt-3 ver-descripcion" data-proyecto="proyecto3">
+                <i class="fas fa-eye me-1"></i> Ver más detalles
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MODAL PARA DETALLES DE PROYECTOS ===== -->
+    <div class="modal fade" id="detalleProyectoModal" tabindex="-1" aria-labelledby="modalProyectoLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalProyectoLabel">Detalles del Proyecto</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div id="descripcionProyecto" class="modal-description">
+              <!-- Aquí se cargará la descripción dinámicamente -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+            <a href="#donaciones" class="btn btn-danger" onclick="modalProyecto.hide()"><i
+                class="fas fa-heart me-1"></i> Apoyar este proyecto</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Card 2 - Proyecto 2 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1770231384608-09f355f0169a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFuZGElMjByb2pvJTIwYmFtYnV8ZW58MHx8MHx8fDA%3D"
-          class="card-img-top ver-descripcion" data-proyecto="proyecto2"  role="button" alt="Cámaras trampa - Proyecto Monitoreo" style="height: 200px; object-fit: cover;">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title fw-bold text-danger">📡 Proyecto 2: Monitoreo con GPS</h5>
-          <p class="card-text flex-grow-1">Seguimiento satelital y cámaras trampa para estudiar los patrones de movimiento y comportamiento del panda rojo.</p>
-          <button class="btn btn-danger w-100 mt-3 ver-descripcion" data-proyecto="proyecto2">
-            <i class="fas fa-eye me-1"></i> Ver más detalles
-          </button>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 3 - Proyecto 3 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1770231384608-09f355f0169a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFuZGElMjByb2pvJTIwYmFtYnV8ZW58MHx8MHx8fDA%3D"
-          class="card-img-top ver-descripcion " data-proyecto="proyecto3" role="button" alt="Comunidad local - Proyecto Educación" style="height: 200px; object-fit: cover;">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title fw-bold text-danger">👥 Proyecto 3: Educación Ambiental</h5>
-          <p class="card-text flex-grow-1">Talleres en comunidades locales para fomentar la coexistencia y reducir el conflicto humano-panda rojo.</p>
-          <button class="btn btn-danger w-100 mt-3 ver-descripcion" data-proyecto="proyecto3">
-            <i class="fas fa-eye me-1"></i> Ver más detalles
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MODAL PARA DETALLES DE PROYECTOS ===== -->
-<div class="modal fade" id="detalleProyectoModal" tabindex="-1" aria-labelledby="modalProyectoLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content rounded-4">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="modalProyectoLabel">Detalles del Proyecto</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <div id="descripcionProyecto" class="modal-description">
-          <!-- Aquí se cargará la descripción dinámicamente -->
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-        <a href="#donaciones" class="btn btn-danger"  onclick="modalProyecto.hide()"><i class="fas fa-heart me-1"></i> Apoyar este proyecto</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-   
     <!-- Donaciones -->
     <section id="donaciones" class="container my-5" aria-labelledby="donaciones-titulo">
       <div class="donation-card">
@@ -428,8 +448,7 @@
           <p>Tu donación ayuda a conservar una especie única</p>
         </div>
         <div class="form-body">
-          <form id="donacionPandaForm" netlify method="POST"
-            novalidate>
+          <form id="donacionPandaForm" netlify method="POST" novalidate>
             <input type="hidden" name="_subject" value="Nueva donación Panda Rojo">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -531,7 +550,11 @@
     </div>
   </footer>
 
-  <a href="#" class="scroll-to-top" id="scrollTopBtn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
+<!-- Contenedor cookies -->
+  <div id="contenedor-cookies"></div>
+
+<!--Botón Subir  -->
+<a href="#" class="scroll-to-top" id="scrollTopBtn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
 
 
 </body>
