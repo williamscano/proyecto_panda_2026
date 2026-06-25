@@ -12,6 +12,7 @@ let timeLeft = totalTime;
 let score = 0;
 let finished = false;
 
+const question  = [ ]
 const questions = [
 
 {
