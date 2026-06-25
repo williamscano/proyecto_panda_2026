@@ -1,0 +1,2 @@
+RewriteEngine Off
+ErrorDocument 404 /pandarojo/404.html
