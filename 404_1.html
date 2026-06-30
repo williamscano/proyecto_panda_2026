@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Panda Rojo Extraviado</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos generales y temática panda rojo */
+    body {
+      background: linear-gradient(145deg, #2d1b0e 0%, #4a2c1a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+    }
+
+    .error-card {
+      background: rgba(255, 245, 235, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 3.5rem 3.5rem 2.5rem 2.5rem;
+      box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.7), 0 0 0 2px #e07a5f inset, 0 0 0 4px #f4d0b5 inset;
+      padding: 2.8rem 2.5rem 3.5rem;
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.25s ease;
+      border: 1px solid #f7c9b0;
+    }
+
+    .error-card:hover {
+      transform: scale(1.01);
+    }
+
+    /* Ilustración del panda rojo */
+    .panda-illustration {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .panda-emoji-big {
+      font-size: 8.5rem;
+      line-height: 1;
+      filter: drop-shadow(0 12px 18px rgba(180, 60, 30, 0.4));
+      animation: floatY 5s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    .panda-emoji-big i {
+      background: #d45c3a;
+      padding: 0.3rem 0.5rem;
+      border-radius: 50%;
+      color: #fbe9d7;
+      font-size: 6rem;
+      box-shadow: 0 4px 0 #8a3c24;
+    }
+
+    @keyframes floatY {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Números 404 con estilo */
+    .error-number {
+      font-size: 7rem;
+      font-weight: 900;
+      letter-spacing: 8px;
+      background: linear-gradient(135deg, #c4452b, #e07a5f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 3px 6px 12px rgba(160, 50, 20, 0.3);
+      line-height: 1.1;
+      margin: 0.2rem 0 0.6rem;
+    }
+
+    .error-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #4d2b1b;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .error-subtitle {
+      font-size: 1.2rem;
+      color: #5f3d2b;
+      background: rgba(224, 122, 95, 0.15);
+      display: inline-block;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      backdrop-filter: blur(3px);
+      border: 1px solid #e07a5f77;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .error-message {
+      color: #3f2a1c;
+      font-size: 1.1rem;
+      background: #fcf1e9;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+      border-left: 6px solid #cf5a3a;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+      margin: 1.8rem 0 2rem;
+    }
+
+    .error-message i {
+      color: #c4452b;
+      margin-right: 8px;
+    }
+
+    .btn-panda {
+      background: #b64128;
+      border: none;
+      border-radius: 60px;
+      padding: 0.8rem 2.5rem;
+      font-weight: 600;
+      color: white;
+      transition: all 0.2s;
+      box-shadow: 0 6px 0 #782f1d, 0 6px 14px rgba(150, 50, 20, 0.35);
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-panda:hover {
+      background: #cf5033;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 0 #782f1d, 0 12px 22px rgba(160, 50, 20, 0.4);
+      color: white;
+    }
+
+    .btn-panda:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #782f1d;
+    }
+
+    .btn-outline-panda {
+      background: transparent;
+      border: 2px solid #b64128;
+      color: #b64128;
+      border-radius: 60px;
+      padding: 0.7rem 1.8rem;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn-outline-panda:hover {
+      background: #b64128;
+      color: white;
+      border-color: #b64128;
+      transform: scale(1.02);
+    }
+
+    .footer-404 {
+      margin-top: 2.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem 1.5rem;
+      color: #6b4d3a;
+      font-size: 0.95rem;
+      border-top: 2px dashed #dbaa92;
+      padding-top: 1.8rem;
+    }
+
+    .footer-404 a {
+      color: #a5442c;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.15s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .footer-404 a:hover {
+      border-bottom-color: #b64128;
+      color: #712f1d;
+    }
+
+    .paw-prints {
+      font-size: 1.6rem;
+      letter-spacing: 6px;
+      color: #c98b72;
+      opacity: 0.6;
+    }
+
+    /* Estilo responsive */
+    @media (max-width: 480px) {
+      .error-card { padding: 2rem 1.2rem; }
+      .error-number { font-size: 4.8rem; }
+      .panda-emoji-big { font-size: 6rem; }
+      .panda-emoji-big i { font-size: 4.2rem; }
+      .error-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-card">
+    <!-- Cabecera con panda y número 404 -->
+    <div class="panda-illustration">
+      <span class="panda-emoji-big" aria-hidden="true">
+        <i class="fas fa-paw"></i>
+      </span>
+    </div>
+    <div class="error-number">404</div>
+    <h1 class="error-title">¡Panda Rojo despistado!</h1>
+    <div class="error-subtitle">
+      <i class="fas fa-tree me-2"></i> Se ha perdido en el bosque
+    </div>
+
+    <!-- Mensaje simpático -->
+    <div class="error-message">
+      <i class="fas fa-leaf"></i> 
+      Esta página no existe, pero nuestro panda rojo ya está buscándola entre los bambúes. 
+      <span class="d-block mt-1 fw-semibold" style="color:#b64128;">Mientras tanto, vuelve a casa.</span>
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+      <a href="https://pandita2026.vercel.app/" class="btn btn-panda">
+        <i class="fas fa-home me-2"></i>Ir al inicio
+      </a>
+      <a href="/" class="btn btn-outline-panda">
+        <i class="fas fa-search me-1"></i>Explorar
+      </a>
+    </div>
+
+    <!-- Enlaces útiles y huellas -->
+    <div class="footer-404">
+      <span class="paw-prints">
+        <i class="fas fa-paw"></i><i class="fas fa-paw"></i><i class="fas fa-paw"></i>
+      </span>
+      <div>
+        <a href="#"><i class="fas fa-envelope me-1"></i> Contacto</a>
+        <span class="mx-1 text-muted">|</span>
+        <a href="#"><i class="fas fa-donate me-1"></i> Ayuda a los pandas</a>
+        <span class="mx-1 text-muted">|</span>
+        <a href="#"><i class="fas fa-arrow-left me-1"></i> Volver</a>
+      </div>
+      <span class="paw-prints">
+        <i class="fas fa-paw"></i><i class="fas fa-paw"></i><i class="fas fa-paw"></i>
+      </span>
+    </div>
+
+    <!-- Pequeño detalle final -->
+    <div class="mt-3 text-muted" style="font-size:0.75rem; opacity:0.7;">
+      <i class="fas fa-bamboo me-1"></i> Conservación del panda rojo · #NoEstabasAquí
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional, para interacciones) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
