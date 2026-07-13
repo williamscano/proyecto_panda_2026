@@ -1,6 +1,6 @@
-# Nombre de tu Proyecto
+# Proyecto Panda Rojo
 
-Una breve descripción de una o dos líneas sobre qué hace tu sitio web o aplicación (por ejemplo: "Sitio web oficial para la gestión de donaciones y landing page informativa").
+Sitio web de ejemplo del curso CP Confección y Publicación Web nivel 2, basado en HTML, CSS, javscript y BS5; página optimizada (responsive, GA4) de código abierto lo puede clonar y trabajar con Vscode; y actualizar cambios directamente a infinityfree a traves de workflows.
 
 ## 🚀 Características
 *   **Diseño Modular:** Componentes reutilizables estructurados para el encabezado y pie de página.
