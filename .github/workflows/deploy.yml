@@ -25,4 +25,4 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: htdocs/prueba_pro/  # <--- GitHub creará y subirá todo aquí
+        server-dir: /htdocs/prueba_pro/  # <--- GitHub creará y subirá todo aquí
